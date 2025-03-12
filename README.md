@@ -57,19 +57,36 @@ Update `DATABASES` settings in `feedback_system/settings.py`.
 
 1. **Get JWT Token**
 
+
 `curl -X POST http://localhost:8000/api/login/`
+
+
 `-H "Content-Type: application/json"`
+
+
 `-d '{"username": "admin", "password": "admin123"}'`
+
+
 
 2. **Create Feedback**
 `curl -X POST http://localhost:8000/api/feedback/`
+
+
 `-H "Authorization: Bearer YOUR_TOKEN"`
+
+
 `-H "Content-Type: application/json"`
+
+
 `-d '{"title": "Bug Report", "description": "Critical error", "category": "bug"}'`
+
+
 
 ## Testing
 
 To run unit tests: 
+
+
 `python manage.py test feedback`
 
 
