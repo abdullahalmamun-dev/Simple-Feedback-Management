@@ -2,8 +2,7 @@ from rest_framework import generics, permissions
 from .models import Feedback
 from .serializers import FeedbackSerializer, CustomUserSerializer, CustomTokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework.response import Response
-from rest_framework import status
+from .permissions import IsOwnerOrAdmin
 
 class RegisterView(generics.CreateAPIView):
     serializer_class = CustomUserSerializer
