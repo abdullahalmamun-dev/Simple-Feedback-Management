@@ -56,19 +56,21 @@ Update `DATABASES` settings in `feedback_system/settings.py`.
 ### API Usage Examples
 
 1. **Get JWT Token**
-curl -X POST http://localhost:8000/api/login/
--H "Content-Type: application/json"
--d '{"username": "admin", "password": "admin123"}'
+
+`curl -X POST http://localhost:8000/api/login/`
+`-H "Content-Type: application/json"`
+`-d '{"username": "admin", "password": "admin123"}'`
 
 2. **Create Feedback**
-curl -X POST http://localhost:8000/api/feedback/
--H "Authorization: Bearer YOUR_TOKEN"
--H "Content-Type: application/json"
--d '{"title": "Bug Report", "description": "Critical error", "category": "bug"}'
+`curl -X POST http://localhost:8000/api/feedback/`
+`-H "Authorization: Bearer YOUR_TOKEN"`
+`-H "Content-Type: application/json"`
+`-d '{"title": "Bug Report", "description": "Critical error", "category": "bug"}'`
 
 ## Testing
 
-To run unit tests: python manage.py test feedback
+To run unit tests: 
+`python manage.py test feedback`
 
 
 ## Contributing
