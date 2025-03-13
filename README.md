@@ -86,6 +86,8 @@ Update `DATABASES` settings in `feedback_system/settings.py`.
 
 To run unit tests: 
 
+`python manage.py runserver`
+
 
 `python manage.py test feedback`
 
